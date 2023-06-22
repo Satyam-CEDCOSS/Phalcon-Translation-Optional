@@ -1,0 +1,55 @@
+<br>
+<form method="POST" action="/language">
+    <label for="lang">Select Language:
+        <select name="lang" id="lang">
+            <option value="">-Select-</option>
+            <option value="en">English</option>
+            <option value="hn">Hindi</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </label>
+</form>
+
+<?php
+
+$btn = "btn btn-primary";
+echo "<h1>" . $this->locale->_('Hello') . " ";
+echo $this->locale->_('User') . "</h1>";
+
+echo PHP_EOL;
+// $t->_()
+echo $this->tag->linkTo(['signup', $this->locale->_('SignUp'), 'class' => $btn]);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo(['product', $this->locale->_('Product'), 'class' => $btn]);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo(
+    [
+        'order',
+        $this->locale->_('Order'),
+        'class' => $btn
+    ]
+);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo(
+    [
+        'setting',
+        $this->locale->_('Setting'),
+        'class' => $btn
+    ]
+);
+
+echo PHP_EOL;
+
+echo $this->tag->linkTo(
+    [
+        'add',
+        $this->locale->_('Add CAU'),
+        'class' => $btn
+    ]
+);
